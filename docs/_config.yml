@@ -29,9 +29,14 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
+# WhatATheme homepage background
+heroimage: "https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+
 # Build settings
-theme: minima
+remote_theme: thedevslot/WhatATheme@master
+
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
 
 # Exclude from processing.
