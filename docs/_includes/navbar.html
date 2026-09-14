@@ -1,0 +1,42 @@
+<nav class="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation" id="navbar">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item"
+                href="{% if page.layout == 'default' %}{{site.url}}{{site.baseurl}}/#{% else %}{{site.url}}{{site.baseurl}}/{% endif %}">
+                <strong>{{site.title}}</strong>
+            </a>
+            <div class="navbar-burger" data-target="navbar-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="navbar-menu has-background-black" id="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item {% if page.layout == 'default' %}is-active{% endif %}"
+                    href="{% if page.layout == 'default' %}{{site.url}}{{site.baseurl}}/#{% else %}{{site.url}}{{site.baseurl}}/{% endif %}">HOME</a>
+                <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/#about">ABOUT</a>
+                <a class="navbar-item {% if page.layout == 'blog' or page.layout == 'post' %}is-active{% endif %}"
+                    href="{{site.url}}{{site.baseurl}}/blog/">BLOG</a>
+                {% include dropdown.html %}
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        if ($navbarBurgers.length > 0) {
+            $navbarBurgers.forEach(function ($el) {
+                $el.addEventListener('click', function () {
+                    var target = $el.dataset.target;
+                    var $target = document.getElementById(target);
+                    $el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+                });
+            });
+        }
+    });
+</script>
