@@ -1,0 +1,323 @@
+<section class="hero game-about" id="about">
+  <div class="game-about__inner">
+    <header class="game-about__heading">
+      <span class="game-about__eyebrow">GAME STORY</span>
+      <h2>코인 9999개로 모자랄까요?</h2>
+      <p>동전을 모아 사라져 가는 재물의 여신을 되살리고, 더 강한 용사로 성장하는 판타지 액션 게임</p>
+    </header>
+
+    <figure class="game-about__title-art">
+      <img src="{{ '/assets/images/titlebg.png' | relative_url }}"
+        alt="코인 9999개로 모자랄까요? 게임 대표 이미지">
+    </figure>
+
+    <div class="game-story">
+      <article class="game-story__chapter">
+        <figure class="game-story__image">
+          <img src="{{ '/assets/images/story1.png' | relative_url }}"
+            alt="숲속에서 부서져 가는 재물의 여신상을 발견한 대검용사" loading="lazy">
+        </figure>
+        <div class="game-story__copy">
+          <span class="game-story__number">STORY 01</span>
+          <h3>잊힌 여신과 대검용사</h3>
+          <p>
+            잃어버린 동료의 흔적을 찾아 숲을 뒤지던 대검용사. 빨간 리본과 머플러,
+            거대한 검이 트레이드마크인 그녀는 호탕하고 재물에는 욕심이 없지만,
+            곤경에 처한 이를 그냥 지나치지 못합니다.
+          </p>
+          <p>
+            숲의 오래된 유적에서 용사가 발견한 것은 빛을 잃고 부서져 가는 재물의 여신상.
+            한때 찬란한 금빛으로 빛났던 여신은 사람들에게 잊힌 채 소멸을 기다리고 있었습니다.
+          </p>
+        </div>
+      </article>
+
+      <article class="game-story__chapter game-story__chapter--reverse">
+        <figure class="game-story__image">
+          <img src="{{ '/assets/images/story2.png' | relative_url }}"
+            alt="동전을 바치는 계약을 제안하는 재물의 여신과 대검용사" loading="lazy">
+        </figure>
+        <div class="game-story__copy">
+          <span class="game-story__number">STORY 02</span>
+          <h3>동전을 바치면, 힘을 주겠어요</h3>
+          <p>
+            여신은 몬스터가 떨어뜨리는 동전을 바쳐 자신이 힘을 되찾도록 도와주면,
+            그 대가로 부와 강한 힘을 주겠다고 제안합니다. 바쁜 용사는 단번에 거절하지만,
+            이대로는 사라질 수밖에 없다는 여신의 호소를 끝내 외면하지 못합니다.
+          </p>
+          <blockquote>“딱 필요한 만큼만 도와주는 거야.”</blockquote>
+          <p>
+            그렇게 조금 못 미더운 여신과 재물에 관심 없는 용사의 기묘한 동행이 시작됩니다.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <section class="game-loop" aria-labelledby="game-loop-title">
+      <span class="game-about__eyebrow">GROWTH LOOP</span>
+      <h3 id="game-loop-title">베고, 바치고, 더 강해져라!</h3>
+      <div class="game-loop__steps">
+        <div class="game-loop__step">
+          <strong>01</strong>
+          <span>몬스터 처치</span>
+        </div>
+        <span class="game-loop__arrow" aria-hidden="true">›</span>
+        <div class="game-loop__step">
+          <strong>02</strong>
+          <span>동전 획득</span>
+        </div>
+        <span class="game-loop__arrow" aria-hidden="true">›</span>
+        <div class="game-loop__step">
+          <strong>03</strong>
+          <span>여신에게 봉헌</span>
+        </div>
+        <span class="game-loop__arrow" aria-hidden="true">›</span>
+        <div class="game-loop__step">
+          <strong>04</strong>
+          <span>용사 강화</span>
+        </div>
+      </div>
+      <p class="game-loop__closing">
+        용사가 강해질수록 더 많은 몬스터를 빠르게 쓰러뜨리고, 여신은 더 많은 힘을 되찾습니다.<br>
+        여신에게도 좋고, 용사에게도 좋은 이야기… 맞겠죠?
+      </p>
+      <a class="game-about__cta" href="{{ '/blog/' | relative_url }}">개발 기록 보기</a>
+    </section>
+  </div>
+</section>
+
+<style>
+  .game-about {
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 15% 5%, rgba(255, 212, 82, 0.2), transparent 28rem),
+      linear-gradient(180deg, #fffaf0 0%, #fff 42%, #fff8e5 100%);
+    color: #38240f;
+  }
+
+  .game-about__inner {
+    width: min(1180px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 6rem 0;
+  }
+
+  .game-about__heading {
+    max-width: 780px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+  }
+
+  .game-about__eyebrow,
+  .game-story__number {
+    display: inline-block;
+    color: #d98b00;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+  }
+
+  .game-about__heading h2 {
+    margin: 0.65rem 0 0.8rem;
+    color: #2d1a08;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    font-weight: 900;
+    line-height: 1.15;
+  }
+
+  .game-about__heading p {
+    color: #725b41;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.8;
+  }
+
+  .game-about__title-art {
+    overflow: hidden;
+    margin: 0 0 5rem;
+    border: 5px solid #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 1.5rem 4rem rgba(100, 61, 5, 0.2);
+  }
+
+  .game-about__title-art img,
+  .game-story__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .game-story {
+    display: grid;
+    gap: 5rem;
+  }
+
+  .game-story__chapter {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+    align-items: center;
+    gap: clamp(2rem, 5vw, 4.5rem);
+  }
+
+  .game-story__chapter--reverse .game-story__image {
+    order: 2;
+  }
+
+  .game-story__chapter--reverse .game-story__copy {
+    order: 1;
+  }
+
+  .game-story__image {
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+    margin: 0;
+    border-radius: 1.25rem;
+    box-shadow: 0 1.25rem 3rem rgba(84, 52, 11, 0.18);
+  }
+
+  .game-story__copy h3,
+  .game-loop h3 {
+    margin: 0.65rem 0 1.25rem;
+    color: #2d1a08;
+    font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+    font-weight: 900;
+    line-height: 1.25;
+  }
+
+  .game-story__copy p {
+    margin-bottom: 1rem;
+    color: #68533b;
+    font-size: 1.02rem;
+    line-height: 1.9;
+  }
+
+  .game-story__copy blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid #e2a020;
+    border-radius: 0 0.65rem 0.65rem 0;
+    background: #fff3ce;
+    color: #9e250f;
+    font-size: 1.16rem;
+    font-weight: 800;
+  }
+
+  .game-loop {
+    margin-top: 6rem;
+    padding: clamp(2rem, 5vw, 4rem);
+    border: 1px solid rgba(197, 137, 20, 0.25);
+    border-radius: 1.5rem;
+    background: rgba(255, 255, 255, 0.84);
+    box-shadow: 0 1.25rem 3rem rgba(84, 52, 11, 0.1);
+    text-align: center;
+  }
+
+  .game-loop__steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+
+  .game-loop__step {
+    display: grid;
+    min-width: 140px;
+    min-height: 110px;
+    place-content: center;
+    gap: 0.25rem;
+    border: 2px solid #f0bd45;
+    border-radius: 1rem;
+    background: linear-gradient(145deg, #fffdf7, #fff1bd);
+    box-shadow: 0 0.75rem 1.5rem rgba(184, 120, 5, 0.12);
+  }
+
+  .game-loop__step strong {
+    color: #e49500;
+    font-size: 1.5rem;
+  }
+
+  .game-loop__step span {
+    color: #4b3219;
+    font-weight: 800;
+  }
+
+  .game-loop__arrow {
+    padding: 0 0.8rem;
+    color: #e09a0e;
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+
+  .game-loop__closing {
+    color: #68533b;
+    line-height: 1.85;
+  }
+
+  .game-about__cta {
+    display: inline-block;
+    min-width: 0 !important;
+    margin: 2rem 0 0 !important;
+    padding: 0.9rem 1.8rem;
+    border: 2px solid #ad2b13;
+    border-radius: 999px;
+    background: #c9371b;
+    color: #fff !important;
+    font-weight: 800;
+    box-shadow: 0 0.65rem 1.25rem rgba(173, 43, 19, 0.22);
+    transition: transform 160ms ease, box-shadow 160ms ease;
+  }
+
+  .game-about__cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.9rem 1.6rem rgba(173, 43, 19, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .game-about__inner {
+      width: min(100% - 1.25rem, 1180px);
+      padding: 4.5rem 0;
+    }
+
+    .game-about__title-art {
+      margin-bottom: 3.5rem;
+      border-width: 3px;
+      border-radius: 1rem;
+    }
+
+    .game-story {
+      gap: 3.5rem;
+    }
+
+    .game-story__chapter {
+      grid-template-columns: 1fr;
+      gap: 1.6rem;
+    }
+
+    .game-story__chapter--reverse .game-story__image,
+    .game-story__chapter--reverse .game-story__copy {
+      order: initial;
+    }
+
+    .game-loop {
+      margin-top: 4rem;
+      padding: 2rem 1rem;
+    }
+
+    .game-loop__steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.4rem;
+    }
+
+    .game-loop__step {
+      width: min(100%, 280px);
+      min-height: 88px;
+      margin: 0 auto;
+    }
+
+    .game-loop__arrow {
+      padding: 0;
+      line-height: 1;
+      transform: rotate(90deg);
+    }
+  }
+</style>

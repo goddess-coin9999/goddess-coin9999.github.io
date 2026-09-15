@@ -18,20 +18,19 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: 코인 9999개로는 모자란가요?
+email: goddesscoin9999@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  코인푸셔를 결합한 여신과 용사의 귀여운 로그라이크 액션 게임!
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://goddess-coin9999.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+#twitter_username: jekyllrb
+github_username:  goddess-coin9999
 
 # WhatATheme homepage background
-heroimage: "https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-hero-video: "/assets/videos/hero.mp4"
+heroimage: "/assets/images/titlebg.png"
+hero-video: "/assets/movies/hero.mp4"
+author-image: "/assets/images/126x126.png"
 
 # Build settings
 remote_theme: thedevslot/WhatATheme@master

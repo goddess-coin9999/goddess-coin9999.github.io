@@ -9,7 +9,7 @@ layout: compress
 <body>
   {% include navbar.html %}
 
-  <section class="hero is-fullheight" id="blog">
+  <section class="hero" id="blog">
     <div class="hero-body">
       <div class="container">
         {% if page.subtitle %}
@@ -36,6 +36,13 @@ layout: compress
       <p class="subtitle has-text-centered">아직 작성된 글이 없습니다.</p>
     {% endfor %}
   </section>
+
+  <style>
+    #blog > .hero-body {
+      flex-grow: 0;
+      padding: 4.5rem 1.5rem 1.25rem;
+    }
+  </style>
 
   <br>
   {% include footer.html %}
