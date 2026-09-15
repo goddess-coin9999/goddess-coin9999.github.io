@@ -1,0 +1,263 @@
+<section class="hero pigeon-team" id="contact">
+  <div class="pigeon-team__inner">
+    <div class="pigeon-team__intro">
+      <div class="pigeon-team__logo-card">
+        <img src="{{ '/assets/images/pigeon-forge-logo.png' | relative_url }}"
+          alt="비둘기 공방 Pigeon Forge 로고" loading="lazy">
+      </div>
+
+      <div class="pigeon-team__copy">
+        <h2>비둘기 공방</h2>
+        <p class="pigeon-team__english">PIGEON FORGE</p>
+        <p class="pigeon-team__lead">
+          아이디어를 직접 플레이하며<br>
+          하나씩 다듬어가는 게임 제작팀입니다.
+        </p>
+        <p class="pigeon-team__description">
+          비둘기 공방은 아이디어를 실제 게임으로 구현하고,<br>
+          직접 플레이하며 필요한 부분을 하나씩 손보는 과정을 중요하게 생각합니다.<br><br>
+          친숙하고 가벼운 이름처럼 쉽게 다가가면서도,<br>
+          플레이한 뒤에는 분명한 개성과 재미가 남는 게임을 만들고자 합니다.<br>
+        </p>
+
+        <div class="pigeon-team__links">
+          {% if site.email %}
+            <a class="pigeon-team__button pigeon-team__button--primary" href="mailto:{{ site.email }}">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <span>연락 이메일</span>
+            </a>
+            <a class="pigeon-team__email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <figure class="pigeon-team__meeting">
+      <img src="{{ '/assets/images/pigeon-forge-meeting.jpg' | relative_url }}"
+        alt="함께 둘러앉아 게임을 기획하는 비둘기 공방 팀" loading="lazy">
+      <figcaption>
+        <strong>아이디어가 모이는 비둘기 공방의 작업 시간</strong>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<style>
+  .pigeon-team {
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 85% 15%, rgba(242, 184, 59, 0.16), transparent 25rem),
+      linear-gradient(145deg, #17130f 0%, #282017 100%);
+    color: #fff;
+  }
+
+  .pigeon-team__inner {
+    width: min(1120px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: clamp(4.5rem, 8vw, 7rem) 0;
+  }
+
+  .pigeon-team__intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    align-items: center;
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+  }
+
+  .pigeon-team__logo-card {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 2rem;
+    background: #fff;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.34);
+  }
+
+  .pigeon-team__logo-card img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+  }
+
+  .pigeon-team__eyebrow {
+    color: #f2b83b;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+  }
+
+  .pigeon-team__copy h2 {
+    margin: 0.65rem 0 0;
+    color: #fff;
+    font-size: clamp(2.8rem, 7vw, 5.2rem);
+    font-weight: 900;
+    letter-spacing: -0.06em;
+    line-height: 1;
+  }
+
+  .pigeon-team__english {
+    margin-top: 0.55rem;
+    color: rgba(255, 255, 255, 0.38);
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 0.34em;
+  }
+
+  .pigeon-team__lead {
+    margin: 2rem 0 1rem;
+    color: #fff6df;
+    font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+    font-weight: 800;
+    line-height: 1.55;
+  }
+
+  .pigeon-team__description {
+    max-width: 620px;
+    color: rgba(255, 255, 255, 0.68);
+    line-height: 1.9;
+  }
+
+  .pigeon-team__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  #contact .pigeon-team__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    gap: 0.6rem;
+    margin: 0;
+    padding: 0.85rem 1.35rem;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 999px;
+    color: #fff;
+    font-weight: 800;
+    transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+  }
+
+  #contact .pigeon-team__button--primary {
+    border-color: #f2b83b;
+    background: #f2b83b;
+    color: #24180a;
+  }
+
+  #contact .pigeon-team__button:hover {
+    border-color: #f2b83b;
+    background: rgba(242, 184, 59, 0.12);
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  #contact .pigeon-team__button--primary:hover {
+    background: #ffd165;
+    color: #24180a;
+  }
+
+  #contact .pigeon-team__button svg {
+    margin: 0;
+  }
+
+  #contact .pigeon-team__email {
+    display: inline-flex;
+    align-items: center;
+    min-width: 0;
+    margin: 0 0 0 0.25rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.88rem;
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+  }
+
+  .pigeon-team__meeting {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 7;
+    margin: clamp(3.5rem, 7vw, 6rem) 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 1.5rem;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.35);
+  }
+
+  .pigeon-team__meeting::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 42%, rgba(13, 10, 7, 0.88) 100%);
+    content: "";
+  }
+
+  .pigeon-team__meeting img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 52%;
+  }
+
+  .pigeon-team__meeting figcaption {
+    position: absolute;
+    z-index: 1;
+    right: clamp(1.25rem, 4vw, 3rem);
+    bottom: clamp(1.25rem, 4vw, 2.5rem);
+    left: clamp(1.25rem, 4vw, 3rem);
+    display: grid;
+    gap: 0.35rem;
+  }
+
+  .pigeon-team__meeting figcaption span {
+    color: #f2b83b;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+  }
+
+  .pigeon-team__meeting figcaption strong {
+    color: #fff;
+    font-size: clamp(1.15rem, 2.6vw, 1.75rem);
+  }
+
+  @media (max-width: 768px) {
+    .pigeon-team__inner {
+      width: min(100% - 1.25rem, 1120px);
+      padding: 4.5rem 0;
+    }
+
+    .pigeon-team__intro {
+      grid-template-columns: 1fr;
+      gap: 2.25rem;
+    }
+
+    .pigeon-team__logo-card {
+      width: min(78vw, 340px);
+      margin: 0 auto;
+      border-radius: 1.4rem;
+    }
+
+    .pigeon-team__copy {
+      text-align: center;
+    }
+
+    .pigeon-team__description {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .pigeon-team__links {
+      justify-content: center;
+    }
+
+    #contact .pigeon-team__email {
+      margin-left: 0;
+    }
+
+    .pigeon-team__meeting {
+      aspect-ratio: 4 / 3;
+      border-radius: 1rem;
+    }
+  }
+</style>
